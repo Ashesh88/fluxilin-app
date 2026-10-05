@@ -6,6 +6,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { StatCounter } from '@/components/ui/StatCounter';
 import { CanvasContainer } from '@/components/3d/CanvasContainer';
 import { HeroScene } from '@/components/3d/HeroScene';
+import { useIsDesktop } from '@/lib/useIsDesktop';
 
 const STATS = [
   { value: 68, suffix: '+', label: 'Campaigns Live' },
@@ -15,6 +16,8 @@ const STATS = [
 ];
 
 export function HeroSection() {
+  const isDesktop = useIsDesktop();
+
   return (
     <section className="relative min-h-screen flex flex-col overflow-hidden bg-base">
       {/* Grid lines background */}
@@ -24,13 +27,15 @@ export function HeroSection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#6366F1]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute top-40 right-0 w-96 h-96 bg-[#A3E635]/5 blur-[100px] rounded-full pointer-events-none" />
 
-      {/* 3D Canvas — right side */}
-      <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 z-10 pointer-events-auto cursor-grab active:cursor-grabbing">
-        <CanvasContainer cameraPosition={[0, 0, 7]} fov={45} className="w-full h-full">
-          <HeroScene />
-        </CanvasContainer>
+      {/* 3D Canvas — right side (desktop only) */}
+      {isDesktop && (
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 z-10 pointer-events-auto cursor-grab active:cursor-grabbing">
 
-      </div>
+          <CanvasContainer cameraPosition={[0, 0, 7]} fov={45} className="w-full h-full">
+            <HeroScene />
+          </CanvasContainer>
+        </div>
+      )}
 
       {/* Content */}
       <div className="relative z-20 pointer-events-none flex flex-col justify-center flex-grow pt-32 pb-16 px-6 lg:px-8 max-w-7xl mx-auto w-full">
@@ -58,6 +63,7 @@ export function HeroSection() {
             <br />
             Not Just Views.
           </motion.h1>
+
 
           {/* Subheadline */}
           <motion.p
@@ -90,6 +96,7 @@ export function HeroSection() {
             >
               View Case Studies
             </a>
+
           </motion.div>
 
           {/* Stats Row */}
@@ -110,8 +117,6 @@ export function HeroSection() {
           </motion.div>
         </div>
       </div>
-
-    
     </section>
   );
 }
