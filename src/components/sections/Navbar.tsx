@@ -19,9 +19,24 @@ export function Navbar() {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (!href.startsWith('#')) return;
+    e.preventDefault();
+    setOpen(false);
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    window.history.replaceState(
+      null,
+      '',
+      window.location.pathname + window.location.search
+    );
+  };
 
   return (
     <header
@@ -53,6 +68,7 @@ export function Navbar() {
             <a
               key={l.name}
               href={l.href}
+              onClick={(e) => handleNavClick(e, l.href)}
               className="text-sm text-muted hover:text-main transition-colors"
             >
               {l.name}
@@ -73,6 +89,7 @@ export function Navbar() {
           </a>
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, '#contact')}
             className="flex items-center gap-1.5 bg-[#6366F1] hover:bg-[#4F46E5] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors"
           >
             For Brands
@@ -98,7 +115,7 @@ export function Navbar() {
               <a
                 key={l.name}
                 href={l.href}
-                onClick={() => setOpen(false)}
+                onClick={(e) => handleNavClick(e, l.href)}
                 className="text-base text-main font-medium py-1"
               >
                 {l.name}
@@ -115,7 +132,7 @@ export function Navbar() {
             </a>
             <a
               href="#contact"
-              onClick={() => setOpen(false)}
+              onClick={(e) => handleNavClick(e, '#contact')}
               className="flex items-center justify-center gap-2 bg-[#6366F1] text-white text-sm font-semibold px-5 py-3 rounded-lg"
             >
               For Brands <ArrowUpRight className="w-4 h-4 text-white" />
