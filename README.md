@@ -122,4 +122,4 @@ npm start
 
 ## 📄 License
 
-© 2025 Fluxilin. All rights reserved.
+© 2026 Fluxilin. All rights reserved.
