@@ -164,7 +164,7 @@ export function Footer() {
               </div>
 
               <div className="text-[11px] text-subtle pt-1">
-                Hubs: Mumbai · Bengaluru<br />Delhi NCR · Dubai
+                headquarter : Noida
               </div>
             </div>
           </div>
