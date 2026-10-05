@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { SmoothScrollProvider } from '@/components/ui/SmoothScrollProvider';
+import { ThemeProvider } from '@/components/ui/ThemeProvider';
+import { ChatbotWidget } from '@/components/ui/ChatbotWidget';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
 
@@ -29,14 +31,16 @@ export const metadata: Metadata = {
     'UGC Agency India',
     'Performance Influencer Campaigns',
   ],
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'Fluxilin — India\'s Influencer Marketing Agency',
     description: 'Scale your brand with India\'s top creators. Real reach. Real results.',
     type: 'website',
   },
 };
-import { ThemeProvider } from '@/components/ui/ThemeProvider';
-import { ChatbotWidget } from '@/components/ui/ChatbotWidget';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
