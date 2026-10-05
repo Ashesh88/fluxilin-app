@@ -28,7 +28,7 @@ const SECTIONS = [
   },
   {
     title: '6. Contact',
-    body: 'Fluxilin Media Pvt. Ltd. | Email: YOUR_EMAIL@fluxilin.in',
+    body: 'Fluxilin Media Pvt. Ltd. | Email: Fluxilin@gmail.com',
   },
 ];
 
