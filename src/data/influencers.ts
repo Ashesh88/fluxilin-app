@@ -1,0 +1,326 @@
+export interface Influencer {
+  id: string;
+  name: string;
+  handle: string;
+  avatar: string;
+  coverImage?: string;
+  category: 'Fashion' | 'Tech' | 'Fitness' | 'Beauty' | 'Lifestyle' | 'Food' | 'Travel' | 'Gaming' | 'Finance';
+  location: string;
+  followers: string;
+  followersCount: number;
+  engagementRate: string;
+  avgViews: string;
+  platforms: ('instagram' | 'youtube' | 'linkedin' | 'x')[];
+  topNiche: string;
+  bio: string;
+  demographics: {
+    ageGroup: string;
+    genderRatio: string;
+    topCities: string[];
+    vernacularPreference: string;
+  };
+  featuredBrands: string[];
+  recentCampaign: {
+    brand: string;
+    roi: string;
+    deliverable: string;
+    views: string;
+  };
+  badge?: string;
+  rating: number;
+}
+
+export const INFLUENCER_CATEGORIES = [
+  'All',
+  'Fashion',
+  'Tech',
+  'Fitness',
+  'Beauty',
+  'Lifestyle',
+  'Food',
+  'Travel',
+  'Gaming',
+  'Finance',
+] as const;
+
+export const INFLUENCERS: Influencer[] = [
+  {
+    id: 'creator-1',
+    name: 'Aanya Sharma',
+    handle: '@aanyastyles',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80',
+    category: 'Fashion',
+    location: 'Mumbai & Milan',
+    followers: '1.4M',
+    followersCount: 1400000,
+    engagementRate: '6.8%',
+    avgViews: '420K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: 'High-Street Indian Fusion & Luxury Styling',
+    bio: 'Pioneering slow-fashion narratives and luxury street edits. Featured in Vogue India 40 Under 40.',
+    demographics: {
+      ageGroup: '18-28 yrs (72%)',
+      genderRatio: '78% Female / 22% Male',
+      topCities: ['Mumbai', 'Delhi NCR', 'Bengaluru', 'Dubai'],
+      vernacularPreference: 'Hinglish & English',
+    },
+    featuredBrands: ['H&M', 'Zara', 'Nykaa Luxe', 'Sabyasachi Acc'],
+    recentCampaign: {
+      brand: 'Nykaa Luxe Festive Drop',
+      roi: '5.2x ROAS',
+      deliverable: '3 Reels + 1 YT Lookbook',
+      views: '1.8M',
+    },
+    badge: 'Top Tier 1 Fashion',
+    rating: 4.95,
+  },
+  {
+    id: 'creator-2',
+    name: 'Kabir Varma',
+    handle: '@techwithkabir',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80',
+    category: 'Tech',
+    location: 'Bengaluru',
+    followers: '2.8M',
+    followersCount: 2800000,
+    engagementRate: '7.4%',
+    avgViews: '850K',
+    platforms: ['youtube', 'instagram', 'x'],
+    topNiche: 'AI Gadgets, Smartphones & Smart Workspace Teardowns',
+    bio: 'No-BS tech unboxings, deep-dive benchmarks, and futuristic gadget tests for smart Indian consumers.',
+    demographics: {
+      ageGroup: '20-34 yrs (84%)',
+      genderRatio: '82% Male / 18% Female',
+      topCities: ['Bengaluru', 'Hyderabad', 'Pune', 'Chennai'],
+      vernacularPreference: 'English & Hindi',
+    },
+    featuredBrands: ['OnePlus', 'Samsung India', 'Nothing Tech', 'Sony'],
+    recentCampaign: {
+      brand: 'Nothing Phone Launch',
+      roi: '6.4x Conversion',
+      deliverable: '1 Longform Review + 4 Shorts',
+      views: '3.4M',
+    },
+    badge: 'High Conversion Tech',
+    rating: 4.98,
+  },
+  {
+    id: 'creator-3',
+    name: 'Dr. Rhea Sengupta',
+    handle: '@dr.rheaskin',
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80',
+    category: 'Beauty',
+    location: 'Delhi NCR',
+    followers: '920K',
+    followersCount: 920000,
+    engagementRate: '9.1%',
+    avgViews: '380K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: 'Derm-Backed Clean Skincare & Ingredient Science',
+    bio: 'Certified Cosmetic Dermatologist decoding ingredient lists, barrier repair, and science-led beauty.',
+    demographics: {
+      ageGroup: '21-35 yrs (88%)',
+      genderRatio: '86% Female / 14% Male',
+      topCities: ['Delhi NCR', 'Kolkata', 'Chandigarh', 'Bengaluru'],
+      vernacularPreference: 'Hindi & English',
+    },
+    featuredBrands: ['The Derma Co', 'Cetaphil India', 'Minimalist', 'Kiehl’s'],
+    recentCampaign: {
+      brand: 'Minimalist Barrier Serum',
+      roi: '7.1x ROAS',
+      deliverable: 'Derm Breakdown Reel + Live Q&A',
+      views: '1.2M',
+    },
+    badge: 'Medical Authority',
+    rating: 4.99,
+  },
+  {
+    id: 'creator-4',
+    name: 'Vikramaditya Rao',
+    handle: '@vikram_ironcore',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80',
+    category: 'Fitness',
+    location: 'Hyderabad',
+    followers: '1.1M',
+    followersCount: 1100000,
+    engagementRate: '8.2%',
+    avgViews: '490K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: 'Hypertrophy, Clean Nutrition & High-Energy Workouts',
+    bio: 'Ex-Athlete & CSCS Coach. Building aesthetic, injury-free physiques with zero pseudo-science.',
+    demographics: {
+      ageGroup: '18-32 yrs (89%)',
+      genderRatio: '75% Male / 25% Female',
+      topCities: ['Hyderabad', 'Chennai', 'Visakhapatnam', 'Mumbai'],
+      vernacularPreference: 'Telugu & English',
+    },
+    featuredBrands: ['MuscleBlaze', 'Under Armour India', 'Cult.fit', 'Fast&Up'],
+    recentCampaign: {
+      brand: 'Cult.fit Transform 90',
+      roi: '4.9x Signups',
+      deliverable: '3 Reel Challenges + Workout Vlog',
+      views: '2.1M',
+    },
+    badge: 'Fitness Authority',
+    rating: 4.91,
+  },
+  {
+    id: 'creator-5',
+    name: 'Tanya & Rohan',
+    handle: '@wanderlust_duo',
+    avatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+    category: 'Travel',
+    location: 'Goa / Worldwide',
+    followers: '1.9M',
+    followersCount: 1900000,
+    engagementRate: '7.9%',
+    avgViews: '720K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: 'Cinematic Hidden Gem Expeditions & Luxury Stays',
+    bio: 'Couple filmmakers uncovering off-grid India, Himalayan trails, and boutique eco-villas.',
+    demographics: {
+      ageGroup: '22-38 yrs (79%)',
+      genderRatio: '52% Female / 48% Male',
+      topCities: ['Mumbai', 'Delhi', 'Bengaluru', 'Pune', 'Ahmedabad'],
+      vernacularPreference: 'Hindi & English',
+    },
+    featuredBrands: ['Airbnb India', 'GoPro India', 'MakeMyTrip', 'Taj Hotels'],
+    recentCampaign: {
+      brand: 'MakeMyTrip Homestays',
+      roi: '5.8x Bookings',
+      deliverable: 'Cinematic Docu-Reel Series',
+      views: '4.5M',
+    },
+    badge: 'Cinematic Visuals',
+    rating: 4.96,
+  },
+  {
+    id: 'creator-6',
+    name: 'Chef Samarpreet',
+    handle: '@tastetalesbysamar',
+    avatar: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80',
+    category: 'Food',
+    location: 'Chandigarh & Delhi',
+    followers: '1.6M',
+    followersCount: 1600000,
+    engagementRate: '8.6%',
+    avgViews: '610K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: '15-Minute Gourmet Meals & Heritage Desi Recipes',
+    bio: 'Masterchef alumnus bringing restaurant-grade quick dining and authentic North Indian spice masteries.',
+    demographics: {
+      ageGroup: '19-45 yrs (80%)',
+      genderRatio: '60% Female / 40% Male',
+      topCities: ['Chandigarh', 'Delhi NCR', 'Ludhiana', 'Jaipur'],
+      vernacularPreference: 'Punjabi & Hindi',
+    },
+    featuredBrands: ['Amul', 'Zomato', 'Prestige Cookware', 'Veeba'],
+    recentCampaign: {
+      brand: 'Zomato Gold Midnight Cook-off',
+      roi: '6.2x Order Lift',
+      deliverable: '4 Snack Hacks + Live Cookalong',
+      views: '3.1M',
+    },
+    badge: 'High Viral Retention',
+    rating: 4.94,
+  },
+  {
+    id: 'creator-7',
+    name: 'Prateek Joshi',
+    handle: '@prateek_finwealth',
+    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80',
+    category: 'Finance',
+    location: 'Mumbai',
+    followers: '2.1M',
+    followersCount: 2100000,
+    engagementRate: '5.9%',
+    avgViews: '540K',
+    platforms: ['youtube', 'linkedin', 'instagram'],
+    topNiche: 'Personal Wealth, Tax Hacks & Smart Equity Investing',
+    bio: 'CA & Ex-Investment Banker explaining compounding, index investing, and startup valuation without jargon.',
+    demographics: {
+      ageGroup: '23-40 yrs (91%)',
+      genderRatio: '72% Male / 28% Female',
+      topCities: ['Mumbai', 'Bengaluru', 'Delhi NCR', 'Pune', 'Indore'],
+      vernacularPreference: 'Hinglish & English',
+    },
+    featuredBrands: ['CRED', 'Zerodha Varsity', 'INDmoney', 'HDFC Sky'],
+    recentCampaign: {
+      brand: 'CRED Wealth Upgrade',
+      roi: '4.8x High-AUM signups',
+      deliverable: '1 Longform Case Study + 3 Shorts',
+      views: '2.6M',
+    },
+    badge: 'SEBI Compliant / Trusted',
+    rating: 4.97,
+  },
+  {
+    id: 'creator-8',
+    name: 'Ishaan "Shadow" Roy',
+    handle: '@shadowplay_gg',
+    avatar: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80',
+    category: 'Gaming',
+    location: 'Kolkata',
+    followers: '3.4M',
+    followersCount: 3400000,
+    engagementRate: '11.4%',
+    avgViews: '1.2M',
+    platforms: ['youtube', 'instagram', 'x'],
+    topNiche: 'Competitive Esports Streams, PC Rigs & Indie Game Drops',
+    bio: 'Top 10 Indian FPS Streamer with a hyper-engaged Gen-Z community and viral live-stream tournaments.',
+    demographics: {
+      ageGroup: '15-26 yrs (94%)',
+      genderRatio: '84% Male / 16% Female',
+      topCities: ['Kolkata', 'Delhi', 'Guwahati', 'Mumbai', 'Lucknow'],
+      vernacularPreference: 'Hindi, Bengali & English',
+    },
+    featuredBrands: ['ASUS ROG', 'Red Bull India', 'Razer', 'Monster Energy'],
+    recentCampaign: {
+      brand: 'ASUS ROG Zephyrus Launch',
+      roi: '8.4x Engagement',
+      deliverable: 'Tournament Stream + 6 Short Clips',
+      views: '5.2M',
+    },
+    badge: 'Gen-Z Cult Following',
+    rating: 4.93,
+  },
+  {
+    id: 'creator-9',
+    name: 'Meera Nambiar',
+    handle: '@meeranambiar.life',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80',
+    coverImage: 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=1200&q=80',
+    category: 'Lifestyle',
+    location: 'Kochi & Chennai',
+    followers: '1.3M',
+    followersCount: 1300000,
+    engagementRate: '8.8%',
+    avgViews: '510K',
+    platforms: ['instagram', 'youtube'],
+    topNiche: 'Mindful Living, Sustainable Homes & South Indian Aesthetics',
+    bio: 'Bridging modern interior minimalism with rich South Indian vernacular craft and conscious daily rituals.',
+    demographics: {
+      ageGroup: '22-36 yrs (82%)',
+      genderRatio: '74% Female / 26% Male',
+      topCities: ['Kochi', 'Chennai', 'Bengaluru', 'Coimbatore', 'Trivandrum'],
+      vernacularPreference: 'Malayalam, Tamil & English',
+    },
+    featuredBrands: ['FabIndia', 'IKEA India', 'Forest Essentials', 'Pepperfry'],
+    recentCampaign: {
+      brand: 'IKEA Small Spaces Series',
+      roi: '5.4x Store Footfall Lift',
+      deliverable: '3 Home Makeover Episodes',
+      views: '2.8M',
+    },
+    badge: 'Regional Powerhouse',
+    rating: 4.96,
+  },
+];
