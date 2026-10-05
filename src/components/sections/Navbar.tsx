@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
@@ -33,11 +34,14 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-[#6366F1] flex items-center justify-center">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M2 8L8 2L14 8L8 14L2 8Z" fill="white"/>
-            </svg>
-          </div>
+          <Image
+            src="/logo.png"
+            alt="Fluxilin"
+            width={36}
+            height={36}
+            priority
+            className="h-9 w-9 object-contain"
+          />
           <span className="text-lg font-bold tracking-tight text-main font-display">
             Fluxilin
           </span>
