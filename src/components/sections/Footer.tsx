@@ -99,11 +99,11 @@ export function Footer() {
 
               <div className="pt-2 border-t border-border-subtle space-y-1.5">
                 <span className="text-[10px] text-muted uppercase font-bold tracking-wider block">Direct Line</span>
-                <a href="tel:+919214645846" className="text-xs font-semibold text-main hover:text-[#A3E635] flex items-center gap-2 transition-colors">
+                <a href="tel:+919214645840" className="text-xs font-semibold text-main hover:text-[#A3E635] flex items-center gap-2 transition-colors">
                   <Phone className="w-3.5 h-3.5 text-[#A3E635]" />
                   +91 92146 45846
                 </a>
-                <a href="https://wa.me/919214645846?text=Hi%20Fluxilin%2C%20I%20want%20to%20discuss%20an%20influencer%20campaign" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-[#A3E635] flex items-center gap-2 transition-colors">
+                <a href="https://wa.me/919214645840?text=Hi%20Fluxilin%2C%20I%20want%20to%20discuss%20an%20influencer%20campaign" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-[#A3E635] flex items-center gap-2 transition-colors">
                   <MessageCircle className="w-3.5 h-3.5 text-[#A3E635]" />
                   Chat on WhatsApp
                 </a>
