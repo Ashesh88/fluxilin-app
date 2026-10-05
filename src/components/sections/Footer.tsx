@@ -6,29 +6,19 @@ import Image from 'next/image';
 import { ArrowUpRight, CheckCircle2, Phone, MessageCircle } from 'lucide-react';
 import { InstagramIcon, YoutubeIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 
-// '#' ka matlab: abhi real page/link nahi hai. Click pe kuch nahi hoga.
 const LINKS: Record<string, { name: string; href: string }[]> = {
   Company: [
-    { name: 'About Us', href: '#' },
+    { name: 'About Us', href: '#about' },
     { name: 'Case Studies', href: '#case-studies' },
-    { name: 'Careers', href: '#' },
-    { name: 'Press & Media', href: '#' },
   ],
   Services: [
     { name: 'Creator Matchmaking', href: '#services' },
     { name: 'Vernacular Campaigns', href: '#services' },
     { name: 'UGC Lab', href: '#services' },
-    { name: 'Analytics & ROAS', href: '#case-studies' },
-  ],
-  Resources: [
-    { name: 'Blog', href: '#' },
-    { name: '2026 Creator Report', href: '#' },
-    { name: 'Campaign Calculator', href: '#' },
-    { name: 'Brand Safety Policy', href: '#' },
   ],
 };
 
-// Yahan apne real social profile URLs daalo
+// Yahan apne real social profile URLs daalo (https:// ke saath)
 const SOCIALS = [
   { Icon: InstagramIcon, href: '#', label: 'Instagram' },
   { Icon: YoutubeIcon, href: '#', label: 'YouTube' },
@@ -39,7 +29,6 @@ const SOCIALS = [
 const LEGAL = [
   { name: 'Privacy Policy', href: '#' },
   { name: 'Terms of Service', href: '#' },
-  { name: 'ASCI Compliance', href: '#' },
 ];
 
 export function Footer() {
@@ -71,7 +60,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-border-subtle">
           {/* Brand */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <Link href="/" className="flex items-center gap-2 mb-5">
               <Image
                 src="/logo.png"
@@ -111,7 +100,7 @@ export function Footer() {
                 Subscribed. Welcome aboard.
               </div>
             ) : (
-              <form onSubmit={onSubmit} className="flex gap-2">
+              <form onSubmit={onSubmit} className="flex gap-2 max-w-sm">
                 <input
                   type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
                   placeholder="Get monthly creator intel"
@@ -146,7 +135,7 @@ export function Footer() {
           ))}
 
           {/* CTA */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h5 className="text-xs font-bold uppercase tracking-widest text-muted mb-5">Start Now</h5>
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-xs text-[#A3E635]">
