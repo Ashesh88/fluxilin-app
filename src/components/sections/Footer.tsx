@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight, CheckCircle2, Phone, MessageCircle } from 'lucide-react';
 import { InstagramIcon, YoutubeIcon, LinkedinIcon, TwitterIcon } from '@/components/ui/SocialIcons';
 
@@ -27,11 +28,13 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-2 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-[#6366F1] flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M2 8L8 2L14 8L8 14L2 8Z" fill="white"/>
-                </svg>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Fluxilin"
+                width={36}
+                height={36}
+                className="h-9 w-9 object-contain"
+              />
               <span className="font-display text-lg font-bold text-main">Fluxilin</span>
             </Link>
 
