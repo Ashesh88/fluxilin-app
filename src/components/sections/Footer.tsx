@@ -27,8 +27,8 @@ const SOCIALS = [
 ];
 
 const LEGAL = [
-  { name: 'Privacy Policy', href: '#' },
-  { name: 'Terms of Service', href: '#' },
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
 ];
 
 export function Footer() {
@@ -175,14 +175,13 @@ export function Footer() {
           <div>© {new Date().getFullYear()} Fluxilin Media Pvt. Ltd. All rights reserved.</div>
           <div className="flex items-center gap-5">
             {LEGAL.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
-                onClick={(e) => handleAnchorClick(e, item.href)}
                 className="hover:text-main transition-colors"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
