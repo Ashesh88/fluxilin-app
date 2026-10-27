@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -11,6 +11,7 @@ const navLinks = [
   { name: 'Results', href: '#case-studies' },
   { name: 'Creators', href: '#roster' },
   { name: 'Process', href: '#process' },
+  { name: 'Websites', href: '/websites' },
 ];
 
 export function Navbar() {
@@ -143,3 +144,4 @@ export function Navbar() {
     </header>
   );
 }
+
