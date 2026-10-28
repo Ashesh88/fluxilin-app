@@ -6,7 +6,6 @@ import {
   CheckCircle2, ArrowUpRight, Zap, Globe, ShieldCheck,
   Smartphone, BarChart2, Headphones, Star, ChevronDown, ChevronUp
 } from 'lucide-react';
-import Link from 'next/link';
 import { Navbar } from '@/components/sections/Navbar';
 import { Footer } from '@/components/sections/Footer';
 
@@ -69,37 +68,37 @@ const PLANS = [
 
 /* ─── FEATURES ────────────────────────────────────────────────── */
 const FEATURES = [
-  { icon: <Smartphone className="w-6 h-6" />, title: 'Mobile First', desc: 'Every site is tested on real phones. 60%+ traffic is mobile — we never ignore it.' },
-  { icon: <Zap className="w-6 h-6" />, title: 'Lightning Fast', desc: '99+ PageSpeed score. Fast sites rank higher and convert better.' },
-  { icon: <Globe className="w-6 h-6" />, title: 'SEO Ready', desc: 'Meta tags, sitemaps, schema markup — your site will get found on Google.' },
-  { icon: <ShieldCheck className="w-6 h-6" />, title: 'Secure & Reliable', desc: 'SSL certified, daily backups, 99.9% uptime guaranteed.' },
-  { icon: <BarChart2 className="w-6 h-6" />, title: 'Analytics Built-in', desc: 'Track every visitor, click, and conversion from day one.' },
-  { icon: <Headphones className="w-6 h-6" />, title: 'After-Launch Support', desc: 'We don\'t disappear after delivery. WhatsApp support included.' },
+  { icon: <Smartphone className="w-6 h-6" />, title: 'Mobile First', desc: 'Every site is tested on real devices. 60%+ of traffic is mobile — we never cut corners.' },
+  { icon: <Zap className="w-6 h-6" />, title: 'Lightning Fast', desc: '99+ PageSpeed score. Fast sites rank higher on Google and convert better.' },
+  { icon: <Globe className="w-6 h-6" />, title: 'SEO Ready', desc: 'Meta tags, sitemaps, schema markup — your site will be discovered on Google from day one.' },
+  { icon: <ShieldCheck className="w-6 h-6" />, title: 'Secure & Reliable', desc: 'SSL certified, daily backups, 99.9% uptime guaranteed on every plan.' },
+  { icon: <BarChart2 className="w-6 h-6" />, title: 'Analytics Built-in', desc: 'Track every visitor, click, and conversion from the moment you go live.' },
+  { icon: <Headphones className="w-6 h-6" />, title: 'After-Launch Support', desc: "We don't disappear after delivery. WhatsApp support is included in every plan." },
 ];
 
 /* ─── PROCESS ─────────────────────────────────────────────────── */
 const PROCESS = [
-  { step: '01', title: 'Discovery Call', desc: 'We understand your business, goals, and target audience in a 30-min call.' },
+  { step: '01', title: 'Discovery Call', desc: 'We understand your business, goals, and target audience in a free 30-min call.' },
   { step: '02', title: 'Design Mockup', desc: 'You get a full design preview before we write a single line of code.' },
-  { step: '03', title: 'Development', desc: 'We build your site with modern tech — fast, clean, and scalable.' },
-  { step: '04', title: 'Review & Launch', desc: 'You test it, we fix feedback, then we go live. Simple.' },
+  { step: '03', title: 'Development', desc: 'We build your site with modern technology — fast, clean, and scalable.' },
+  { step: '04', title: 'Review & Launch', desc: 'You review, we apply feedback, then we go live. Simple and transparent.' },
 ];
 
-/* ─── FAQ ─────────────────────────────────────────────────────── */
+/* ─── FAQS ────────────────────────────────────────────────────── */
 const FAQS = [
-  { q: 'Kitne din mein website ban jayegi?', a: 'Starter plan: 5 din. Growth plan: 10 din. Pro plan: 21 din. Emergency rush bhi possible hai.' },
-  { q: 'Kya mujhe technical knowledge chahiye?', a: 'Bilkul nahi! Aap sirf apna content aur preferences batao, baaki sab hum handle karte hain.' },
-  { q: 'Kya website ke baad changes karwa sakte hain?', a: 'Haan! Delivery ke baad 30 din free changes milte hain. Uske baad affordable maintenance package available hai.' },
-  { q: 'Payment kaise hogi?', a: '50% advance, 50% delivery pe. UPI, bank transfer, sab accepted.' },
-  { q: 'Kya hosting alag se leni padegi?', a: 'Growth aur Pro plan mein hosting included hai. Starter plan ke liye hum guide karte hain affordable options ke liye.' },
-  { q: 'E-commerce ya store bhi bana sakte ho?', a: 'Haan! Pro plan mein full online store with payment gateway (Razorpay/PayU) included hai.' },
+  { q: 'How long does it take to build my website?', a: 'Starter plan: 5 days. Growth plan: 10 days. Pro plan: 21 days. Rush delivery is also available on request.' },
+  { q: 'Do I need any technical knowledge?', a: 'None at all! Just share your content and preferences — we handle everything from design to deployment.' },
+  { q: 'Can I request changes after delivery?', a: 'Yes! You get 30 days of free revisions after delivery. After that, an affordable maintenance package is available.' },
+  { q: 'How does payment work?', a: '50% upfront, 50% on delivery. We accept UPI, bank transfer, and all major payment methods.' },
+  { q: 'Do I need to buy hosting separately?', a: 'Growth and Pro plans include hosting. For Starter, we guide you through the most affordable hosting options.' },
+  { q: 'Can you build an online store?', a: 'Absolutely! The Pro plan includes a full e-commerce store with payment gateway integration (Razorpay / PayU).' },
 ];
 
-/* ─── TESTIMONIALS ────────────────────────────────────────────── */
+/* ─── REVIEWS ─────────────────────────────────────────────────── */
 const REVIEWS = [
-  { name: 'Ritesh Sharma', biz: 'RK Sweets, Jaipur', stars: 5, text: 'Website bani aur 3 hafte mein online orders shuru ho gaye. Bohot smooth process tha!' },
-  { name: 'Priya Mehta', biz: 'Studio Priya, Delhi', stars: 5, text: 'Design ekdum meri pasand ka bana. Clients ab pehle website dekhte hain, phir call karte hain.' },
-  { name: 'Farhan Siddiqui', biz: 'TechFix Solutions, Pune', stars: 5, text: 'Professional team hai. Revisions bhi bina argument ke kiye. Highly recommend!' },
+  { name: 'Ritesh Sharma', biz: 'RK Sweets, Jaipur', stars: 5, text: 'Website went live and within 3 weeks we started getting online orders. The process was incredibly smooth!' },
+  { name: 'Priya Mehta', biz: 'Studio Priya, Delhi', stars: 5, text: 'The design turned out exactly how I imagined. Clients now check my website before calling — that says it all.' },
+  { name: 'Farhan Siddiqui', biz: 'TechFix Solutions, Pune', stars: 5, text: 'Very professional team. Revisions were done without any pushback. Highly recommend Fluxilin!' },
 ];
 
 /* ─── FAQ Item ────────────────────────────────────────────────── */
@@ -132,7 +131,6 @@ export default function WebsitesPage() {
 
         {/* ── HERO ── */}
         <section className="relative pt-36 pb-24 px-6 text-center overflow-hidden">
-          {/* bg glows */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#6366F1]/10 blur-[120px] rounded-full pointer-events-none" />
           <div className="absolute top-20 right-1/4 w-[300px] h-[300px] bg-[#A3E635]/8 blur-[100px] rounded-full pointer-events-none" />
 
@@ -223,7 +221,6 @@ export default function WebsitesPage() {
               <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">Why Choose Us</p>
               <h2 className="font-display text-4xl sm:text-5xl font-bold">Built to Perform.</h2>
             </motion.div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {FEATURES.map((f, i) => (
                 <motion.div
@@ -259,7 +256,7 @@ export default function WebsitesPage() {
             >
               <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">Transparent Pricing</p>
               <h2 className="font-display text-4xl sm:text-5xl font-bold mb-4">Simple. No Hidden Charges.</h2>
-              <p className="text-muted max-w-xl mx-auto">Jo dikhta hai, wahi deta hai. Koi surprise bill nahi.</p>
+              <p className="text-muted max-w-xl mx-auto">What you see is what you pay. No surprise bills.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -295,7 +292,6 @@ export default function WebsitesPage() {
                       <span className="text-muted text-lg">₹</span>
                       <span className="font-display text-5xl font-bold text-main">{plan.price}</span>
                     </div>
-
                     <ul className="space-y-3 flex-1 mb-8">
                       {plan.features.map((f) => (
                         <li key={f} className="flex items-start gap-2.5 text-sm text-muted">
@@ -304,9 +300,8 @@ export default function WebsitesPage() {
                         </li>
                       ))}
                     </ul>
-
                     <a
-                      href={`https://wa.me/919214645846?text=Hi%20Fluxilin!%20I%27m%20interested%20in%20the%20${plan.name}%20website%20plan%20(₹${plan.price}).`}
+                      href={`https://wa.me/919214645846?text=Hi%20Fluxilin!%20I'm%20interested%20in%20the%20${plan.name}%20website%20plan.`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full text-center py-3.5 px-6 rounded-xl font-semibold text-sm transition-all hover:-translate-y-0.5"
@@ -316,15 +311,18 @@ export default function WebsitesPage() {
                         border: `2px solid ${plan.color}`,
                       }}
                     >
-                      Start with {plan.name} →
+                      Get Started →
                     </a>
                   </div>
                 </motion.div>
               ))}
             </div>
-
             <p className="text-center text-muted text-sm mt-8">
-              💬 Custom requirements? <a href="https://wa.me/919214645846" target="_blank" rel="noopener noreferrer" className="text-[#6366F1] font-medium hover:underline">Chat with us on WhatsApp</a> for a tailored quote.
+              Need something custom?{' '}
+              <a href="https://wa.me/919214645846" target="_blank" rel="noopener noreferrer" className="text-[#6366F1] font-medium hover:underline">
+                Chat with us on WhatsApp
+              </a>{' '}
+              for a tailored quote.
             </p>
           </div>
         </section>
@@ -339,9 +337,8 @@ export default function WebsitesPage() {
               className="text-center mb-16"
             >
               <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">How It Works</p>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold">4 Steps to Your Dream Site</h2>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold">4 Steps to Your Dream Website</h2>
             </motion.div>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {PROCESS.map((p, i) => (
                 <motion.div
@@ -375,10 +372,9 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">Reviews</p>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold">Clients Love Us. 🤍</h2>
+              <p className="text-[#6366F1] text-sm font-semibold uppercase tracking-widest mb-3">Client Reviews</p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold">Our Clients Love Us. 🤍</h2>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {REVIEWS.map((r, i) => (
                 <motion.div
@@ -455,7 +451,8 @@ export default function WebsitesPage() {
               transition={{ delay: 0.15 }}
               className="text-muted text-lg mb-10"
             >
-              Ab wait mat karo. Ek WhatsApp message se shuru karo — free consultation, zero pressure.
+              Start with a free consultation — no commitment, no pressure.
+              One WhatsApp message is all it takes.
             </motion.p>
             <motion.a
               initial={{ opacity: 0, y: 10 }}
@@ -467,9 +464,9 @@ export default function WebsitesPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#6366F1] hover:bg-[#4F46E5] text-white font-bold px-10 py-5 rounded-2xl text-lg transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#6366F1]/30"
             >
-              WhatsApp Karo Abhi <ArrowUpRight className="w-5 h-5" />
+              Chat With Us on WhatsApp <ArrowUpRight className="w-5 h-5" />
             </motion.a>
-            <p className="text-subtle text-sm mt-5">🕐 Usually reply within 30 minutes</p>
+            <p className="text-subtle text-sm mt-5">🕐 We typically reply within 30 minutes</p>
           </div>
         </section>
 
